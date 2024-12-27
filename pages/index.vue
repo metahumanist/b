@@ -1,6 +1,18 @@
 <template>
-    <div class="flex flex-col items-center justify-center" style="height: 100vh">
-        <h1 class="text-center">Welcome to the blog starter!</h1>
-        <NuxtLink to="/blog/">Read the blog!</NuxtLink>
-    </div>
+  <div>
+    <h1>Авторы</h1>
+    <ul>
+      <li v-for="author in authors" :key="author._path">
+        <NuxtLink :to="author._path.replace('/authors/', '/')">
+          {{ author.name }}
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
 </template>
+
+<script setup>
+const { data: authors } = await useAsyncData('authors', () => 
+  queryContent('authors').find()
+)
+</script>
