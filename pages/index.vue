@@ -15,6 +15,16 @@
 const { data: authors } = await useAsyncData('authors', () => 
   queryContent('authors').find()
 )
+
+useHead({
+  title: 'Canfly - Главная страница',
+  meta: [
+    { name: 'description', content: 'Откройте для себя талантливых авторов на Canfly' },
+    { property: 'og:title', content: 'Canfly - Главная страница' },
+    { property: 'og:description', content: 'Откройте для себя талантливых авторов на Canfly' },
+    { name: 'robots', content: 'index, follow' }
+  ]
+})
 </script>
 
 <style scoped>
