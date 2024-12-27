@@ -1,6 +1,9 @@
 <template>
   <div v-if="author" class="p-4">
     <div class="mb-8">
+      <a href="https://canfly.org/" class="text-blue-500 hover:underline">
+        Canfly
+      </a>
       <h1 class="text-3xl font-bold">My name is {{ author.name }}</h1>
       <p class="text-gray-600">{{ author.bio }}</p>
     </div>
