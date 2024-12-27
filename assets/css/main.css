@@ -148,9 +148,6 @@ p {
     @apply list-decimal ml-6 mb-4;
 }
 
-.blog-content ol ol {
-    @apply list-alpha ml-6;
-}
 .blog-content > * + * {
     @apply mt-6;
 }
