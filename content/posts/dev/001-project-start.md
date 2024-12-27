@@ -2,7 +2,7 @@
 title: Начало проекта Canfly Blog
 description: Как мы начали разработку блог-платформы
 author: dev
-date: 2024-01-15
+date: 2024-12-28
 ---
 
 # Старт проекта Canfly Blog
