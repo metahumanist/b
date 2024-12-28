@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canfly - Welcome to a New Era</title>
+    <style>
+        /* Сброс стилей */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Основные стили */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #2ac8ed, #35a7f3);
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Анимация для текста */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Контейнер */
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        /* Логотип */
+        .logo {
+            max-width: 120px;
+            margin: 0 auto 20px;
+        }
+
+        /* Заголовок */
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* Описание */
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            animation: fadeInUp 2.5s ease-in-out;
+        }
+
+        /* Кнопка */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1rem;
+            color: #ffffff;
+            background: #1565c0;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            animation: fadeInUp 3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #0d47a1;
+        }
+
+        /* Частицы */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Частицы -->
+    <div id="particles-js"></div>
+
+    <!-- Основной контент -->
+    <div class="container">
+        <!-- Логотип -->
+        <img src="data:image/png;base64,[BASE64]" alt="Canfly Logo" class="logo">
+
+        <!-- Заголовок -->
+        <h1>Welcome to Canfly</h1>
+        <p>
+            Canfly is at the forefront of artificial intelligence and creative technology, building a bridge between reality and imagination. Join us in shaping the future of education and innovation.
+        </p>
+        <a href="#" class="btn">Learn More</a>
+    </div>
+
+    <!-- Скрипты -->
+    <script>
+        // Конфигурация particles.js
+        const particlesConfig = {
+            particles: {
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.6, anim: { enable: true, speed: 1 } },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, color: "#ffffff", opacity: 0.4 },
+                move: { enable: true, speed: 2, random: false }
+            },
+            interactivity: {
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                },
+                modes: { repulse: { distance: 100 } }
+            },
+            retina_detect: true
+        };
+
+        // Подключение particles.js
+        const particlesScript = document.createElement("script");
+        particlesScript.src = "https://cdn.jsdelivr.net/npm/particles.js";
+        particlesScript.onload = () => particlesJS("particles-js", particlesConfig);
+        document.body.appendChild(particlesScript);
+    </script>
+</body>
+</html>
